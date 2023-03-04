@@ -11,6 +11,8 @@ def showCatalogContentByPage(base_url,code, spcode, **kwargs):
     return r
 
 if __name__ == "__main__":
-    base_url = "http://10.0.1.156:8183/vas-rest"
-    r = showCatalogContentByPage(base_url, code="f613c694c70d4a7bb534ea3bf5300a0a",spcode="86cd9e3e0fa440b9866d7b89021b8c59",orderByField="sequence")
+    base_url = "http://10.0.2.102:9998/vas-rest"
+    r = showCatalogContentByPage(base_url, code="9b52def1a44143faaa84bd3ce3c8a00c",spcode="71e1545719c54c468b7ee6033121f551",orderByField="sequence")
     print(r.text)
+    count=r.json()["data"]["totalCount"]
+    print(count)

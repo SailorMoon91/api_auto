@@ -11,6 +11,6 @@ def showCatalogAll(base_url,parentCode, spcode,**kwargs):
     return r
 
 if __name__ == "__main__":
-    base_url = "http://10.0.1.156:8183/vas-rest"
-    r = showCatalogAll(base_url, parentCode="f5fecedac6e0469d98f475c60084c0d1", spcode="86cd9e3e0fa440b9866d7b89021b8c51",orderByField="sequence")
+    base_url = "http://10.0.2.102:9998/vas-rest"
+    r = showCatalogAll(base_url, parentCode="ecb319c70ba445d58ba4e128e041063a", spcode="71e1545719c54c468b7ee6033121f551",orderByField="sequence")
     print(r.text)
